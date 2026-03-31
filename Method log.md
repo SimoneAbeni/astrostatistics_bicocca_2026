@@ -39,3 +39,28 @@
 - `hist, bin_edges = numpy.histogram(z)` [API](https://numpy.org/doc/stable/reference/generated/numpy.histogram.html)
 - `numpy.searchsorted()` [API](https://numpy.org/doc/stable/reference/generated/numpy.searchsorted.html#numpy-searchsorted)
 - `numpy.cumsum()` [API](https://numpy.org/doc/stable/reference/generated/numpy.cumsum.html#numpy-cumsum)
+
+## Lecture 7
+
+- Hypothesis testing
+    - p-value
+    - significance $\alpha$
+    - sample contamination: $F.+/TOTAL +$
+- Comparing distributions
+    - KS-test. Null hypothesis $H_0$: the two samples are drawn from the same distribution; statistic($\alpha$):
+    $$D_{KS} = \sqrt{-\frac{\ln(\alpha/2)}{2 n_e}}$$
+- Distribution-density estimation:
+    - histogram binning
+        - Scott's rule
+        - Freedman's rule
+    - KDE
+    
+### Functions deployed
+- `scipy.stats.binom.isf()` [API](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binom.html#scipy.stats.binom): from p-value to $t_{cut}$
+- `scipy.stats.kstest()` [API](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kstest.html#scipy.stats.kstest)
+- `scipy.stats.ks_2samp()` [API](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ks_2samp.html#scipy.stats.ks_2samp)
+- `numpy.random.shuffle()` [API](https://numpy.org/doc/2.4/reference/random/generated/numpy.random.shuffle.html#numpy.random.shuffle)
+- `astroMLstats.sigmaG()` [API](https://www.astroml.org/modules/generated/astroML.stats.sigmaG.html)
+- `KernelDensity()` [API](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KernelDensity.html)
+- `KernelDensity().fit()` [API](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KernelDensity.html#sklearn.neighbors.KernelDensity.fit:~:text=fit,-%28X%2C%20y)
+- `KernelDensity().score_samples()` [API](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KernelDensity.html#sklearn.neighbors.KernelDensity.score_samples:~:text=score%5Fsamples,-%28X%29)
